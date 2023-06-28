@@ -1,19 +1,17 @@
 # Copyright (c) 2022 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ROMMANA_LEFT
+if SHIELD_SKX_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Rommana"
+	default "Skx"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
 endif
 
-if SHIELD_ROMMANA_LEFT || SHIELD_ROMMANA_RIGHT
-
+if SHIELD_SKX_LEFT || SHIELD_SKX_RIGHT
 config ZMK_SPLIT
 	default y
-
 endif
