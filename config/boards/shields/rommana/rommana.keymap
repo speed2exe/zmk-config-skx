@@ -1,0 +1,119 @@
+/*
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define def 0
+#define right 1
+#define left 2
+#define extra 3
+#define nav 4
+#define sys 5
+
+// &kscan0 {
+//     debounce-period = <16>;
+// };
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <1024>;
+};
+
+&mt {
+    flavor = "balanced";
+    tapping-term-ms = <1024>;
+};
+
+/ {
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <right left>;
+            then-layer = <extra>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        def {
+            bindings = <
+&trans                                  &kp L       &kp H           &kp W
+&trans &trans                                                                           &kp P          &kp U        &kp O
+&trans                 &mt LALT S     &mt LCTRL R   &mt LSHFT N    &mt LGUI T
+&trans &trans                                                                      &mt RGUI D     &mt RSHFT E   &mt RCTRL A    &mt RALT I
+&trans &trans &trans
+&trans &trans &trans
+                                     &lt nav SPACE    &mo right           &mo left     &lt sys SPACE
+                >;
+        };
+
+        right {
+            bindings = <
+&trans                                 &kp GRAVE      &kp LBKT     &kp RBKT
+&trans &trans                                                                      &kp Q    &kp K    &kp Y
+&trans                  &trans     &mt LCTRL SQT  &mt LSHFT COMMA   &mt LGUI DOT
+&trans &trans                                                               &mt RGUI G   &mt RSHFT X   &mt RCTRL J    &mt RALT SEMI
+&trans &trans &trans
+&trans &trans &trans
+                                                    &trans      &trans             &trans   &trans
+                >;
+        };
+
+        left {
+            bindings = <
+&trans                                 &kp F      &kp V     &kp Z
+&trans &trans                                                                      &kp N4    &kp N5    &kp N6
+&trans                    &mt LALT SLASH  &mt LCTRL C  &mt LSHFT B   &mt LGUI M
+&trans &trans                                                               &mt RGUI N1   &mt RSHFT N2   &mt RCTRL N3    &mt RALT N0
+&trans &trans &trans
+&trans &trans &trans
+                                                    &trans      &trans             &trans   &trans
+                >;
+        };
+
+        extra {
+            bindings = <
+&trans                              &trans    &trans    &trans
+&trans &trans                                                                     &trans    &trans   &trans
+&trans                 &trans   &mt LCTRL BSLH   &mt LSHFT MINUS   &mt LGUI EQUAL
+&trans &trans                                                               &mt RGUI N7  &mt RSHFT N8  &mt RCTRL N9   &trans
+&trans &trans &trans
+&trans &trans &trans
+                                                    &trans      &trans           &trans  &trans
+                >;
+        };
+
+        nav {
+            bindings = <
+&trans                          &bt BT_SEL 0   &bt BT_NXT     &bt BT_CLR
+&trans &trans                                                                &kp PG_UP      &kp UP         &kp PG_DN
+&trans                &kp LALT    &kp LCTRL      &kp LSHFT      &kp LGUI
+&trans &trans                                                                &kp LEFT       &kp DOWN       &kp RIGHT      &trans
+&trans &trans &trans
+&trans &trans &trans
+                                           &trans      &trans                 &kp RET     &kp BSPC
+                >;
+        };
+
+        sys {
+            bindings = <
+&trans                             &kp C_VOL_UP    &kp HOME   &kp INS
+&trans &trans                                                                    &trans     &trans   &trans
+&trans               &kp C_MUTE    &kp C_VOL_DN    &kp END    &kp DEL
+&trans &trans                                                                    &kp RGUI     &kp RSHFT   &kp RCTRL    &kp RALT
+&trans &trans &trans
+&trans &trans &trans
+                                             &kp TAB     &kp ESC                &trans   &trans
+                >;
+        };
+
+     };
+};
