@@ -84,7 +84,7 @@
         nav {
             bindings = <
                 &trans      &bt BT_SEL 0   &bt BT_NXT     &bt BT_CLR     &trans
-                    &trans         &kp HOME        &kp UP         &kp END       &kp trans
+                    &trans         &kp HOME        &kp UP         &kp END       &trans
 
                 &trans      &kp LALT       &kp LCTRL      &kp LGUI       &trans
                     &trans        &kp LEFT       &kp DOWN       &kp RIGHT      &trans
