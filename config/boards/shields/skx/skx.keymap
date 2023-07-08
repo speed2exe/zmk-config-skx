@@ -34,14 +34,14 @@
 
         def {
             bindings = <
-                &kp F     &kp L     &kp H    &kp W      &kp SLASH
+                &kp F     &kp L     &kp H    &kp W      &kp Z
                     &kp SEMI    &kp P     &kp U    &kp O    &kp Y
 
-                &kp S     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp Z
-                    &kp Q   &mt RGUI D     &mt RCTRL E      &mt RALT A     &mt RCTRL I
+                &sk LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
+                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &sk RSHFT
 
-                &sk LSHFT   &kp C   &kp B   &kp M   &kp V
-                    &kp K   &kp G   &kp X   &kp J   &sk RSHFT
+                &kp S   &kp C   &kp B   &kp M   &kp SLASH
+                    &kp Q   &kp G   &kp X   &kp J   &kp I
 
                 &sl right   &lt nav SPACE   &kp ESC
                     &kp RET    &lt sys SPACE    &sl left
