@@ -60,7 +60,7 @@
                     &trans      &kp N1     &kp N2      &kp N3     &trans
 
                 &trans      &trans      &trans
-                    &kp DEL      &trans     &kp BSPC
+                    &trans      &trans     &kp BSPC
                 >;
         };
 
@@ -75,7 +75,7 @@
                 &trans    &kp BSLH    &kp MINUS     &kp EQUAL   &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &kp TAB     &kp INS      &trans
+                &kp TAB     &trans      &trans
                     &trans      &trans      &trans
                 >;
         };
@@ -86,10 +86,10 @@
                     &trans         &trans        &kp UP         &trans       &trans
 
                 &trans      &kp LALT       &kp LCTRL      &kp LGUI       &trans
-                    &trans        &kp LEFT       &kp DOWN       &kp RIGHT      &kp K_APP
+                    &trans        &kp LEFT       &kp DOWN       &kp RIGHT      &trans
 
                 &trans         &trans      &trans     &trans         &trans
-                    &trans         &trans      &trans     &trans         &trans
+                    &trans         &trans      &kp K_APP     &trans         &trans
 
                 &trans         &trans         &trans
                     &trans         &trans         &trans
@@ -98,7 +98,7 @@
 
         sys {
             bindings = <
-                &trans         &trans        &kp PG_UP         &trans     &trans
+                &trans         &kp INS        &kp PG_UP         &kp DEL     &trans
                     &trans      &trans         &trans         &trans         &trans
 
                 &trans      &kp HOME        &kp PG_DN         &kp END         &trans
