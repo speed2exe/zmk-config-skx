@@ -11,5 +11,10 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 
-board: [ "seeeduino_xiao_ble" ]
-shield: [ "skx_left", "skx_right" ]
+include:
+  - board: seeeduino_xiao_ble
+    shield: skx_left
+  - board: seeeduino_xiao_ble
+    shield: skx_right
+  - board: seeeduino_xiao_ble
+    shield: settings_reset
