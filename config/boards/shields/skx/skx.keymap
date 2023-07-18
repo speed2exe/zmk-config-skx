@@ -66,10 +66,10 @@
 
         left {
             bindings = <
-                &trans      &kp GRAVE   &kp LBKT      &kp RBKT    &trans
+                &kp CAPS      &kp GRAVE   &kp LBKT      &kp RBKT    &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &kp CAPS   &kp SQT     &kp COMMA     &kp DOT     &trans
+                &trans   &kp SQT     &kp COMMA     &kp DOT     &trans
                     &trans      &kp RGUI    &kp RCTRL     &kp RALT    &trans
 
                 &trans    &kp BSLH    &kp MINUS     &kp EQUAL   &trans
