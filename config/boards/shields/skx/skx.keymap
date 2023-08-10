@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define def 0
-#define right 1
-#define left 2
+#define num 1
+#define sym 2
 #define nav 3
 #define sys 4
 #define con 5
@@ -44,7 +44,7 @@
 // ├─────┤  C  ├─────┤  M  │  /  │                         │  ;  │  G  ├─────┤  J  ├─────┤
 // │  F  ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤  Y  │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │right├─────┐                  ┌─────┤ left│
+//                       │ num ├─────┐                  ┌─────┤ sym │
 //                       └─────┤ Spc ├─────┐      ┌─────┤ Spc ├─────┘
 //                             └─nav─┤ con │      │ fn  ├─sys─┘
 //                                   └─────┘      └─────┘
@@ -58,12 +58,12 @@
                 &kp F   &kp C   &kp B   &kp M   &kp SLASH
                     &kp SEMI   &kp G   &kp X   &kp J   &kp Y
 
-                &mo right   &lt nav SPACE   &mo con
-                    &mo fn    &lt sys SPACE    &mo left
+                &mo num     &lt nav SPACE   &mo con
+                    &mo fn    &lt sys SPACE    &mo sym
                 >;
         };
 
-        right {
+        num {
 //             ┌─────┐                                                 ┌─────┐
 //       ┌─────┤     ├─────┬─────┐                         ┌─────┬─────┤  8  ├─────┐
 // ┌─────┤     ├─────┤     │     │                         │     │  7  ├─────┤  9  ├─────┐
@@ -73,8 +73,8 @@
 // ├─────┤     ├─────┤     │     │                         │     │  1  ├─────┤  3  ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤ Bsp │
-//                       └─────┤     ├─────┐      ┌─────┤ Ret ├─────┘
+//                       │     ├─────┐                  ┌─────┤     │
+//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -88,11 +88,11 @@
                     &trans      &kp N1     &kp N2      &kp N3     &trans
 
                 &trans      &trans      &trans
-                    &trans      &kp RET     &kp BSPC
+                    &trans      &trans      &trans
                 >;
         };
 
-        left {
+        sym {
 //             ┌─────┐                                                 ┌─────┐
 //       ┌─────┤  [  ├─────┬─────┐                         ┌─────┬─────┤     ├─────┐
 // ┌─────┤  `  ├─────┤  ]  │     │                         │     │     ├─────┤     ├─────┐
@@ -102,8 +102,8 @@
 // ├─────┤  \  ├─────┤  =  │     │                         │     │     ├─────┤     ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │ Tab ├─────┐                  ┌─────┤     │
-//                       └─────┤ Esc ├─────┐      ┌─────┤     ├─────┘
+//                       │     ├─────┐                  ┌─────┤     │
+//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -116,7 +116,7 @@
                 &trans    &kp BSLH    &kp MINUS     &kp EQUAL   &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &kp TAB     &kp ESC      &trans
+                &trans      &trans      &trans
                     &trans      &trans      &trans
                 >;
         };
@@ -132,7 +132,7 @@
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
 //                       │     ├─────┐                  ┌─────┤ Bsp │
-//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
+//                       └─────┤     ├─────┐      ┌─────┤ Ret ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -146,7 +146,7 @@
                     &trans         &trans      &kp K_APP     &trans         &trans
 
                 &trans         &trans         &trans
-                    &trans         &trans         &trans
+                    &trans         &kp RET         &kp BSPC
                 >;
         };
 
@@ -174,7 +174,7 @@
                 &trans         &trans         &trans         &trans         &trans
                     &trans      &trans         &trans         &trans         &trans
 
-                &trans         &trans         &trans
+                &kp TAB        &kp ESC        &trans
                     &trans         &trans         &trans
                 >;
         };
