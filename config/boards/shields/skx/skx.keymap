@@ -21,13 +21,13 @@
     tapping-term-ms = <1024>;
 };
 
-// &sk {
-//     quick-release;
-// };
-//
-// &sl {
-//     quick-release;
-// };
+&sk {
+    quick-release;
+};
+
+&sl {
+    quick-release;
+};
 
 / {
 
@@ -52,14 +52,14 @@
                 &kp S     &kp L     &kp H    &kp W      &kp Z
                     &kp Q    &kp P     &kp U    &kp O    &kp I
 
-                &kp LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
-                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &kp RSHFT
+                &sk LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
+                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &sk RSHFT
 
                 &kp F   &kp C   &kp B   &kp M   &kp SLASH
                     &kp SEMI   &kp G   &kp X   &kp J   &kp Y
 
-                &mo num     &lt nav SPACE   &mo con
-                    &mo fn    &lt sys SPACE    &mo sym
+                &sl num     &lt nav SPACE   &sl con
+                    &sl fn    &lt sys SPACE    &sl sym
                 >;
         };
 
