@@ -41,7 +41,7 @@
 // │  S  ├─────┤  N  ├─────┼─────┤                         ├─────┼─────┤  E  ├─────┤  I  │
 // ├─────┤  R  ├─CTL─┤  T  │  V  │                         │  K  │  D  ├─CTL─┤  A  ├─────┤
 // │ SFT ├─ALT─┤  B  ├─GUI─┼─────┤                         ├─────┼─GUI─┤  X  ├─ALT─┤ SFT │
-// ├─────┤  C  ├─────┤  M  │     │                         │     │  G  ├─────┤  J  ├─────┤
+// ├─────┤  C  ├─────┤  M  │  /  │                         │  ;  │  G  ├─────┤  J  ├─────┤
 // │  F  ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤  Y  │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
 //                       │ num ├─────┐                  ┌─────┤ sym │
@@ -55,8 +55,8 @@
                 &sk LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
                     &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &sk RSHFT
 
-                &kp F   &kp C   &kp B   &kp M   &trans
-                    &trans     &kp G   &kp X   &kp J   &kp Y
+                &kp F   &kp C   &kp B   &kp M   &kp SLASH
+                    &kp SEMI   &kp G   &kp X   &kp J   &kp Y
 
                 &sl num     &lt nav SPACE   &sl con
                     &sl fn    &lt sys SPACE    &sl sym
@@ -68,13 +68,13 @@
 //       ┌─────┤     ├─────┬─────┐                         ┌─────┬─────┤  8  ├─────┐
 // ┌─────┤     ├─────┤     │     │                         │     │  7  ├─────┤  9  ├─────┐
 // │     ├─────┤ CTL ├─────┼─────┤                         ├─────┼─────┤  5  ├─────┤  0  │
-// ├─────┤ ALT ├─────┤ GUI │     │                         │  ;  │  4  ├─────┤  6  ├─────┤
+// ├─────┤ ALT ├─────┤ GUI │     │                         │     │  4  ├─────┤  6  ├─────┤
 // │     ├─────┤     ├─────┼─────┤                         ├─────┼─────┤  2  ├─────┤     │
 // ├─────┤     ├─────┤     │     │                         │     │  1  ├─────┤  3  ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤ Bsp │
-//                       └─────┤     ├─────┐      ┌─────┤ Ret ├─────┘
+//                       │     ├─────┐                  ┌─────┤     │
+//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -82,13 +82,13 @@
                     &trans      &kp N7      &kp N8      &kp N9      &kp N0
 
                 &trans   &kp LALT   &kp LCTRL   &kp LGUI   &trans
-                    &kp SEMI    &kp N4     &kp N5      &kp N6     &trans
+                    &trans      &kp N4     &kp N5      &kp N6     &trans
 
                 &trans    &trans     &trans      &trans     &trans
                     &trans      &kp N1     &kp N2      &kp N3     &trans
 
                 &trans      &trans      &trans
-                    &trans         &kp RET         &kp BSPC
+                    &trans      &trans      &trans
                 >;
         };
 
@@ -96,27 +96,27 @@
 //             ┌─────┐                                                 ┌─────┐
 //       ┌─────┤  [  ├─────┬─────┐                         ┌─────┬─────┤     ├─────┐
 // ┌─────┤  `  ├─────┤  ]  │     │                         │     │     ├─────┤     ├─────┐
-// │     ├─────┤  ,  ├─────┼─────┤                         ├─────┼─────┤ CTL ├─────┤     │
-// ├─────┤  '  ├─────┤  .  │  /  │                         │     │ GUI ├─────┤ ALT ├─────┤
+// │ Cap ├─────┤  ,  ├─────┼─────┤                         ├─────┼─────┤ CTL ├─────┤     │
+// ├─────┤  '  ├─────┤  .  │     │                         │     │ GUI ├─────┤ ALT ├─────┤
 // │     ├─────┤  -  ├─────┼─────┤                         ├─────┼─────┤     ├─────┤     │
 // ├─────┤  \  ├─────┤  =  │     │                         │     │     ├─────┤     ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │ Tab ├─────┐                  ┌─────┤     │
-//                       └─────┤ Esc ├─────┐      ┌─────┤     ├─────┘
+//                       │     ├─────┐                  ┌─────┤     │
+//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
-                &trans         &kp GRAVE   &kp LBKT      &kp RBKT    &trans
+                &kp CAPS      &kp GRAVE   &kp LBKT      &kp RBKT    &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &trans   &kp SQT     &kp COMMA     &kp DOT     &kp SLASH
+                &trans   &kp SQT     &kp COMMA     &kp DOT     &trans
                     &trans      &kp RGUI    &kp RCTRL     &kp RALT    &trans
 
                 &trans    &kp BSLH    &kp MINUS     &kp EQUAL   &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &kp TAB        &kp ESC        &trans
+                &trans      &trans      &trans
                     &trans      &trans      &trans
                 >;
         };
@@ -131,8 +131,8 @@
 // ├─────┤     ├─────┤     │     │                         │     │     ├─────┤     ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤     │
-//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
+//                       │     ├─────┐                  ┌─────┤ Bsp │
+//                       └─────┤     ├─────┐      ┌─────┤ Ret ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -146,7 +146,7 @@
                     &trans         &trans      &kp K_APP     &trans         &trans
 
                 &trans         &trans         &trans
-                    &trans      &trans      &trans
+                    &trans         &kp RET         &kp BSPC
                 >;
         };
 
@@ -174,7 +174,7 @@
                 &trans         &trans         &trans         &trans         &trans
                     &trans      &trans         &trans         &trans         &trans
 
-                &trans      &trans      &trans
+                &kp TAB        &kp ESC        &trans
                     &trans         &trans         &trans
                 >;
         };
