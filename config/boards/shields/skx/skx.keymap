@@ -21,13 +21,13 @@
     tapping-term-ms = <1024>;
 };
 
-&sk {
-    quick-release;
-};
-
-&sl {
-    quick-release;
-};
+// &sk {
+//     quick-release;
+// };
+//
+// &sl {
+//     quick-release;
+// };
 
 / {
 
@@ -44,22 +44,22 @@
 // ├─────┤  C  ├─────┤  M  │  /  │                         │  ;  │  G  ├─────┤  J  ├─────┤
 // │  F  ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤  Y  │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │ num ├─────┐                  ┌─────┤ sym │
-//                       └─────┤ Spc ├─────┐      ┌─────┤ Spc ├─────┘
-//                             └─nav─┤ con │      │ fn  ├─sys─┘
-//                                   └─────┘      └─────┘
+//                       │ Tab ├─────┐                  ┌─────┤ BSP │
+//                       └─num─┤ Spc ├─────┐      ┌─────┤ Spc ├─sym─┘
+//                             └─nav─┤ ESC │      │ RET ├─sys─┘
+//                                   └─con─┘      └─fn──┘
             bindings = <
                 &kp S     &kp L     &kp H    &kp W      &kp Z
                     &kp Q    &kp P     &kp U    &kp O    &kp I
 
-                &sk LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
-                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &sk RSHFT
+                &kp LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
+                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &kp RSHFT
 
                 &kp F   &kp C   &kp B   &kp M   &kp SLASH
                     &kp SEMI   &kp G   &kp X   &kp J   &kp Y
 
-                &sl num     &lt nav SPACE   &sl con
-                    &sl fn    &lt sys SPACE    &sl sym
+                &lt num TAB     &lt nav SPACE   &lt con ESC
+                    &lt fn RET    &lt sys SPACE    &lt sym BSPC
                 >;
         };
 
@@ -131,8 +131,8 @@
 // ├─────┤     ├─────┤     │     │                         │     │     ├─────┤     ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤ Bsp │
-//                       └─────┤     ├─────┐      ┌─────┤ Ret ├─────┘
+//                       │     ├─────┐                  ┌─────┤     │
+//                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
             bindings = <
@@ -146,7 +146,7 @@
                     &trans         &trans      &kp K_APP     &trans         &trans
 
                 &trans         &trans         &trans
-                    &trans         &kp RET         &kp BSPC
+                    &trans         &trans         &trans
                 >;
         };
 
@@ -174,7 +174,7 @@
                 &trans         &trans         &trans         &trans         &trans
                     &trans      &trans         &trans         &trans         &trans
 
-                &kp TAB        &kp ESC        &trans
+                &trans        &trans        &trans
                     &trans         &trans         &trans
                 >;
         };
