@@ -21,13 +21,13 @@
     tapping-term-ms = <1024>;
 };
 
-// &sk {
-//     quick-release;
-// };
-//
-// &sl {
-//     quick-release;
-// };
+&sk {
+    quick-release;
+};
+
+&sl {
+    quick-release;
+};
 
 / {
 
@@ -44,22 +44,22 @@
 // ├─────┤  C  ├─────┤  M  │  /  │                         │  ;  │  G  ├─────┤  J  ├─────┤
 // │  F  ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤  Y  │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │ Tab ├─────┐                  ┌─────┤ BSP │
-//                       └─num─┤ Spc ├─────┐      ┌─────┤ Spc ├─sym─┘
+//                       │ num ├─────┐                  ┌─────┤ sym │
+//                       └─────┤ Spc ├─────┐      ┌─────┤ Spc ├─────┘
 //                             └─nav─┤ ESC │      │ RET ├─sys─┘
 //                                   └─con─┘      └─fn──┘
             bindings = <
                 &kp S     &kp L     &kp H    &kp W      &kp Z
                     &kp Q    &kp P     &kp U    &kp O    &kp I
 
-                &kp LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
-                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &kp RSHFT
+                &sk LSHFT     &mt LALT R     &mt LCTRL N    &mt LGUI T    &kp V
+                    &kp K   &mt RGUI D     &mt RCTRL E      &mt RALT A     &sk RSHFT
 
                 &kp F   &kp C   &kp B   &kp M   &kp SLASH
                     &kp SEMI   &kp G   &kp X   &kp J   &kp Y
 
-                &lt num TAB     &lt nav SPACE   &lt con ESC
-                    &lt fn RET    &lt sys SPACE    &lt sym BSPC
+                &sl num         &lt nav SPACE   &lt con ESC
+                    &lt fn RET    &lt sys SPACE    &sl sym
                 >;
         };
 
@@ -73,7 +73,7 @@
 // ├─────┤     ├─────┤     │     │                         │     │  1  ├─────┤  3  ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤     │
+//                       │     ├─────┐                  ┌─────┤ BSP │
 //                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
@@ -88,7 +88,7 @@
                     &trans      &kp N1     &kp N2      &kp N3     &trans
 
                 &trans      &trans      &trans
-                    &trans      &trans      &trans
+                    &trans      &trans      &kp BSPC
                 >;
         };
 
@@ -102,7 +102,7 @@
 // ├─────┤  \  ├─────┤  =  │     │                         │     │     ├─────┤     ├─────┤
 // │     ├─────┘     └─────┴─────┘                         └─────┴─────┘     └─────┤     │
 // └─────┘               ┌─────┐                              ┌─────┐              └─────┘
-//                       │     ├─────┐                  ┌─────┤     │
+//                       │ TAB ├─────┐                  ┌─────┤     │
 //                       └─────┤     ├─────┐      ┌─────┤     ├─────┘
 //                             └─────┤     │      │     ├─────┘
 //                                   └─────┘      └─────┘
@@ -116,7 +116,7 @@
                 &trans    &kp BSLH    &kp MINUS     &kp EQUAL   &trans
                     &trans      &trans      &trans        &trans      &trans
 
-                &trans      &trans      &trans
+                &kp TAB     &trans      &trans
                     &trans      &trans      &trans
                 >;
         };
