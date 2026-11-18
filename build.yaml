@@ -12,9 +12,9 @@
 #     shield: reviung41
 
 include:
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: skx_left
-  - board: seeeduino_xiao_ble
+  - board: xiao_ble//zmk
     shield: skx_right
 #   - board: seeeduino_xiao_ble
 #     shield: settings_reset
